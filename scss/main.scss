@@ -1,0 +1,26 @@
+//config
+@import "config/_media.scss";
+@import "config/_variables.scss";
+@import "config/_mixins.scss";
+
+// bases
+@import "layout/_fonts.scss";
+@import "layout/_base.scss";
+@import "layout/_adjustments.scss";
+
+//functions
+@import "config/_functions.scss";
+// sections
+
+@import "section/mainsection.scss";
+@import "section/aboutsection.scss";
+@import "section/slider.scss";
+@import "section/reviewssection.scss";
+@import "section/teamsection.scss";
+@import "section/menusection.scss";
+@import "section/ordersection.scss";
+@import "section/mapsection.scss";
+@import "section/footer.scss";
+@import "section/openmenu.scss";
+
+@import "config/_media.scss";

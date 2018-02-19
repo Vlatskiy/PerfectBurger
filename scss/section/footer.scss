@@ -1,0 +1,109 @@
+.footer {
+    position: absolute;
+    height: rem(60px);
+    width: 100%;
+    background-image: url(/images/backgrounds/footerbg.png); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+    z-index: 10;
+
+    @include tablets() {
+        margin-top: -56px;
+    }
+    @include phones() {
+        height: 115px;
+        margin-top: -115px;
+    }
+}
+
+.footer__content {
+    width: 100%;
+    display: flex;
+
+    @include phones() {
+        height: 115px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.footer__adress {
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 80px;
+    
+    @include tablets() {
+        margin-left: 24px;
+    }
+
+    @include phones() {
+        margin:0;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+.footer__socials {
+    width: 50%;
+    text-align: right;
+    margin-right: 80px;
+
+    @include tablets() {
+       margin-right: 8px;
+    }
+
+    @include phones() {
+            text-align: center;
+            margin: 0;
+    }
+}
+
+.footer__street {
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: rem(24px);
+}
+
+.footer__tel a {
+    font-family: "Ubuntu";
+    font-size: rem(14px);
+    font-weight: 700;
+    line-height: rem(24px);
+    color: #e45028;
+    text-decoration: none;
+}
+
+.socials__icon {
+    width: rem(25px);
+    height: rem(25px);
+    fill: #ffffff;
+    fill-opacity: 0.3;
+    margin: rem(15px) rem(20px) 0 0;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        fill-opacity: 1;
+    }
+
+    @include tablets() {
+        width: 21px;
+        height: 21px;
+        margin: 17px 16px 0 0;
+    }
+}
+.phoneimg {
+    display: inline;
+    margin-right: 2px;
+}

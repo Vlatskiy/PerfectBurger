@@ -1,0 +1,306 @@
+.ordersection {
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/backgrounds/orderbg.png);
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ordersection .container {
+    @include tablets() {
+        margin-bottom: 120px;
+    }
+
+    @include phones() {
+        margin-bottom: 40px;
+    }
+}
+
+.ordersection__title {
+    display: flex;
+    justify-content: center;
+
+    @include phones () {
+       margin-left: rem(75px);
+    }
+}
+
+.ordersection .title1 {
+    @include title;
+    color:$yellow;
+    margin-top: rem(10px);
+
+    @include phones() {
+        margin-left: 42px;
+        font-size: 3.625rem;
+    }
+}
+
+.form {
+    height: rem(285px);
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-size: 14px;
+
+    @include tablets () {
+        margin-bottom: 250px;
+    }
+    @include phones () {
+        margin-bottom: 290px;
+    }
+}
+
+.form__elem {
+    display: flex;
+    justify-content: center;
+
+    @include tablets () {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.form__content {
+    width: 50%;
+    margin-right: rem(13px);
+    font-family: "Ubuntu";
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    @include tablets () {
+        width: 66%;
+        margin-right: 11px;
+
+        &:last-of-type {
+            margin-right: 11px;
+        }
+    }
+
+    @include phones () {
+        width: 100%;
+    }
+}
+
+.form__row {
+    margin-bottom: rem(13px);
+    display: flex;
+
+    @include tablets() {
+        margin-bottom: 21px;
+    }
+}
+
+.form__block {
+    display: block;
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__block.display {
+    @include phones() {
+        display: none;
+    }
+}
+
+.form__block.margin {
+    @include phones() {
+        margin-right: 0;
+    }
+}
+
+.form__input {
+    padding: rem(10px);
+    background: #fff;
+    border: none;
+    border-radius: rem(5px);
+    width: 100%;
+    margin-top: rem(5px);
+    border: 2px solid transparent;
+}
+
+.form__comment {
+    background: #fff;
+    border: none;
+    border-radius: rem(5px);
+    width: 100%;
+    min-height: rem(112px);
+    margin-bottom: rem(15px);
+    margin-top: rem(5px);
+    border: 2px solid transparent;
+}
+
+.radio__wrap {
+    @include phones () {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+}
+
+.form__checkbox {
+    margin-left: rem(4px);
+    margin-top: 20px;
+
+    .checkbox {
+        width: rem(16px);
+        height: rem(16px);
+        margin-right: rem(6px);
+    }
+
+    label {
+        vertical-align: middle;
+    }
+
+    @include phones () {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+}
+
+.form__buttons {
+    display: flex;
+    align-items: center;
+    margin: rem(13px) 0 0 rem(9px);
+
+    @include tablets() {
+        margin:38px 0 0 0; 
+    }
+
+    @include phones () {
+        justify-content: center;
+        margin-top: 40px;
+    }
+}
+
+.form__content-radiolabel {
+    margin-right: 15px;
+}
+
+.form__radio + .form__content-radiolabel {
+    cursor: pointer;
+}
+
+.form__radio:not(checked) {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .form__radio:not(checked) + .form__content-radiolabel {
+    position: relative;
+    padding: 0 0 0 27px;
+  }
+
+  .form__radio:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #FFF;
+  }
+
+  .form__radio:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 9px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e35028;
+    opacity: 0;
+    transition: all .2s;
+  }
+
+  .form__radio:checked + label:after {
+    opacity: 1;
+  }
+
+  .form__radio:focus + label:before {
+    border: 1px solid #f9b43b;
+  }
+
+  .form__input:focus, .form__comment:focus {
+    outline: none;
+    border: 2px solid #f89513;
+  }
+
+  
+////
+
+.form__content-checkbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+ .checkbox {
+     display: none;
+ }
+
+ .checkbox__custom {
+     position: relative;
+     width: rem(18px);
+     height: rem(18px);
+     background-color: #fff;
+     margin-right: rem(9px);
+ }
+
+ .checkbox:checked + .checkbox__custom::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top:5px;
+        left: 3px;
+        width: 11px;
+        height: 9px;
+        background-image: url('/images/icons/checked.png');
+ }
+
+.checkbox__title {
+    color: #ffffff;
+    font-family: Ubuntu;
+    font-size: rem(15px);
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.button {
+    cursor: pointer;
+    width: 97px;
+    height: 35px;
+    background-color: #e45028;
+    font-family: Ubuntu;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+    line-height: 35px;
+    text-align: center;
+    outline: none;
+    color: #FFF;
+    border: 0;
+    margin-right: rem(20px);
+
+    &:hover {
+        background-color: #c1401e;
+    }
+}
+

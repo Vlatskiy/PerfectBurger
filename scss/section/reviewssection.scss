@@ -1,0 +1,182 @@
+.reviewssection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card__foto{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+.card {
+    width: 25%;
+    height: 50%;
+    position: relative;
+
+    &::after {
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        background: transparent;
+        z-index: 1; 
+        transition: all .3s;
+    }
+
+    &:hover::after {
+        background-color: rgba(0, 0, 0, 0.49);
+        transition: all .3s;
+    }
+
+    @include tablets () {
+        width: 50%;
+        height: 25%;
+    }
+}
+
+.card__info {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: 2;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+
+    @include tablets () {
+        text-align: center;
+        align-items: center;
+    }
+    @include phones () {
+        text-align: center;
+    }
+}
+
+.card:hover .card__info {
+    opacity: 1;
+    transition: all 0.5s;
+} 
+
+.card__name {
+    color: #ffffff;
+    font-family: Gagalin;
+    font-size: 14px;
+    line-height: rem(28px);
+    padding-top: rem(40px);
+    margin-left: 23px;
+
+    @include tablets() {
+        margin-top: 10px;
+    }
+
+    @include phones () {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 29px;
+        padding: 0;
+        white-space: pre-wrap;
+    }
+}
+
+.card__bio {
+    color: #ffffff;
+    font-family: Ubuntu;
+    font-size: rem(14px);
+    line-height: 24px;
+    margin: 16px 20px 14px 23px;
+
+    @include tablets() {
+        margin: 0;
+        width: 280px;
+    }
+
+    @include phones () {
+        display: none;
+    }
+}
+
+.card__button {
+    width: rem(110px);
+    height: rem(35px);
+    background-color: #2f3234;
+    border: rem(0px);
+    border-radius: rem(5px);
+    text-align: center;
+    line-height: rem(35px);
+    cursor: pointer;
+    margin-left: 22px;
+    margin-bottom: 52px;
+
+    @include tablets() {
+    margin-top: 21px;
+    width: 113px;
+    height: 36px;
+    margin-bottom: 37px;
+    }
+
+    @include phones() {
+        width: 127px;
+        height: 35px;
+        margin-top: -8px;
+        line-height: 35px;
+    }
+
+    .card__button-link {
+        text-decoration: none;
+        font-family: "Ubuntu";
+        font-size: rem(13px);
+        font-weight: 500;
+        line-height: rem(30px);
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+
+    &:hover {
+        background-color: #1f2122;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.overlayWrapp {
+    position: relative;
+    width:300px;
+    height: 300px;
+}
+
+.overlay__title {
+    color: #2f3234;
+    font-family: Gagalin;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28.11px;
+}
+
+.overlay__content {
+    color: #2f3234;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+}
