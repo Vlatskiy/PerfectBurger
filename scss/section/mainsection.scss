@@ -1,6 +1,6 @@
 .mainsection {
     height: 100%;
-    background-image: url(/images/backgrounds/mainbg.png); 
+    background-image: url(../images/backgrounds/mainbg.png); 
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
@@ -35,7 +35,7 @@ width: 95%;
 .mainsection__header-logo {
     width: rem(92px);
     height: rem(69px);
-    background-image: url(/images/mainlogo.png);
+    background-image: url(../images/mainlogo.png);
     background-repeat: no-repeat;
     background-size: cover;
 
