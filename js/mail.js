@@ -1,4 +1,3 @@
-// $(".form__order").click(submitForm);
 
 $('#orderForm').on('submit', submitForm);
 
@@ -15,9 +14,9 @@ function submitForm (ev) {
             status = msg.status;
         
         if (status === 'OK') {
-            form.append('<p class="success">' + mes + '</p>');
+            console.log ("Сообщение отправлено")
         } else{
-            form.append('<p class="error">' + mes + '</p>');
+            console.log ("Сообщение не отправлено")
     }}).fail(function(jqXHR, textStatus) {
         alert("Request failed: " + textStatus);
     });
