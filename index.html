@@ -845,7 +845,8 @@
                               
                             </div>
                             <div class="form__buttons">
-                                <button class="button" type="submit" data-fancybox data-options='{"smallBtn" : false, "toolbar" : false}' data-src="#hiddenOrder" href="javascript:;">Заказать</button>
+                                <button class="button" type="submit">Заказать</button>
+                                <!-- data-fancybox data-options='{"smallBtn" : false, "toolbar" : false}' data-src="#hiddenOrder" href="javascript:;" -->
                                 <div class="form__clear">Очистить</div>
                             </div>
                         </div>
@@ -1094,7 +1095,33 @@
                     border: 0;"
                     onmouseover = "this.style.backgroundColor = '#c1401e'"
                     onmouseout  = "this.style.backgroundColor = '#e45028'">Закрыть</button></p>
-            </div>
+        </div>
+    <div style="display: none;
+            width: 200px;
+            height: 110px;
+            text-align: center;" id="hiddenOrder2">
+            <p style="color: #2f3234;
+            font-family: Ubuntu;
+            font-size: 14px;
+            font-weight: 300;">Сообщение не отправлено</p>
+        <p><button data-fancybox-close
+        style="cursor: pointer;
+                width: 97px;
+                height: 35px;
+                background-color: #e45028;
+                font-family: Ubuntu;
+                font-size: 13px;
+                font-weight: 500;
+                text-transform: uppercase;
+                border-radius: 5px;
+                line-height: 35px;
+                text-align: center;
+                outline: none;
+                color: #FFF;
+                border: 0;"
+                onmouseover = "this.style.backgroundColor = '#c1401e'"
+                onmouseout  = "this.style.backgroundColor = '#e45028'">Закрыть</button></p>
+        </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>

@@ -14,9 +14,15 @@ function submitForm (ev) {
             status = msg.status;
         
         if (status === 'OK') {
-            console.log ("Сообщение отправлено")
+            $.fancybox.open($("#hiddenOrder"), {
+                "smallBtn" : false,
+                "toolbar" : false
+                })
         } else{
-            console.log ("Сообщение не отправлено")
+            $.fancybox.open($("#hiddenOrder2"), {
+                "smallBtn" : false,
+                "toolbar" : false
+                })
     }}).fail(function(jqXHR, textStatus) {
         alert("Request failed: " + textStatus);
     });
