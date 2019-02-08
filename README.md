@@ -1,4 +1,4 @@
-## One Page Scroll сайт в рамках обучения в LoftSchool!
+## One Page Scroll site
 
 #### В данном проекте использовались следующие технологии:
 * HTML5
